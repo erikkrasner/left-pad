@@ -1,7 +1,7 @@
 module.exports = leftpad;
 
 function leftpad (str, len, ch) {
-  str = String(str);
+  var padding = "";
 
   var i = -1;
 
@@ -10,8 +10,8 @@ function leftpad (str, len, ch) {
   len = len - str.length;
 
   while (++i < len) {
-    str = ch + str;
+    padding += ch;
   }
 
-  return str;
+  return padding + str;
 }
